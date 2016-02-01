@@ -1,0 +1,25 @@
+<div class="col-sm-8 col-sm-offset-2 end">
+  <h1>{{contact.firstName}} {{contact.lastName}}</h1><br>
+  <dl class="dl-horizontal">
+    <dt>First Name</dt>
+    <dd>{{contact.firstName}}</dd>
+    <dt>Last Name</dt>
+    <dd>{{contact.lastName}}</dd>
+    <dt>E-mail</dt>
+    <dd>{{contact.email}}</dd>
+    <dt>Address</dt>
+    <dd>{{contact.address}}</dd>
+    <dt>City</dt>
+    <dd>{{contact.city}}</dd>
+    <dt>ZIP code</dt>
+    <dd>{{contact.zipcode}}</dd>
+    <dt>Country</dt>
+    <dd>{{contact.country}}</dd>
+  </dl>
+
+  <div class="row text-center">
+    <a ng-href="#/contacts/{{contact.id}}/edit" class="btn btn-primary">Edit Contact</a>
+    <a href="" ng-click="deleteContact(contact)" class="btn btn-danger">Delete</a>
+    <a href="#/contacts" class="btn btn-default">Back to List</a>
+  </div>
+</div>
