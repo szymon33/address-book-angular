@@ -97,7 +97,7 @@ This is not perfect but I don't want to make this example too complicated.
 
 ### Main Menu
 
-Please note that top-right menu stays highlighting accordingly.
+Please note that top-right menu stays highlighted accordingly.
 
 ### Mobile first
 
