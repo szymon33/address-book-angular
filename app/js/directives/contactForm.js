@@ -1,4 +1,4 @@
-addressBook.directive('contactForm', function($sce) {
+addressBook.directive('contactForm', ($sce) => {
   return {
     restrict: "E",
     templateUrl: "views/contacts/form.html"

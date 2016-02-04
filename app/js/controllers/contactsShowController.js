@@ -1,9 +1,9 @@
 'use strict';
 
-addressBook.controller('ContactsShowController', function($scope, $routeParams, localStorageService, $location){
+addressBook.controller('ContactsShowController', ($scope, $routeParams, localStorageService, $location) => {
   let contactsInBook = localStorageService.get('contacts');
   $scope.contacts = contactsInBook || [];
-  $scope.$watch('contacts', function () {
+  $scope.$watch('contacts', () => {
     localStorageService.set('contacts', $scope.contacts);
   }, true);
 

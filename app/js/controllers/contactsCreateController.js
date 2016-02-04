@@ -1,14 +1,18 @@
 'use strict';
 
-addressBook.controller('ContactsCreateController', function($scope, localStorageService, $location){
+addressBook.controller('ContactsCreateController', ($scope, localStorageService, $location) => {
   let contactsInBook = localStorageService.get('contacts');
   $scope.contacts = contactsInBook || [];
-  $scope.$watch('contacts', function () {
+  $scope.$watch('contacts', () => {
     localStorageService.set('contacts', $scope.contacts);
   }, true);
 
-  let Contact = function() {
-    this.autoincrement = function(collection) {
+  class Contact {
+    constructor(contacts) {
+      this.id = this._autoincrement(contacts);
+    }
+
+    _autoincrement(collection) {
       let counter = 0;
       for (let item of collection) {
         if (item.id > counter) {
@@ -17,13 +21,11 @@ addressBook.controller('ContactsCreateController', function($scope, localStorage
       }
       return(counter+1);
     };
-
-    this.id = this.autoincrement($scope.contacts);
   };
 
-  $scope.contact = new Contact();
+  $scope.contact = new Contact($scope.contacts);
 
-  $scope.saveContact = function(contact){
+  $scope.saveContact = function(contact) {
     $scope.contacts.push(contact);
     $location.path("/contacts");
   };

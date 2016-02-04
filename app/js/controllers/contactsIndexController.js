@@ -1,6 +1,6 @@
 'use strict';
 
-addressBook.controller('ContactsIndexController', function($scope, localStorageService, $location){
+addressBook.controller('ContactsIndexController', ($scope, localStorageService, $location) => {
   let contactsInBook = localStorageService.get('contacts');
   $scope.contacts = contactsInBook || [];
 

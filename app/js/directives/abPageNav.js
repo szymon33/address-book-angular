@@ -1,4 +1,4 @@
-addressBook.directive('abPageNav', function(){
+addressBook.directive('abPageNav', () => {
   return {
     replace: true,
     restrict: "E",
