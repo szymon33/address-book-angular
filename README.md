@@ -77,14 +77,6 @@ About page
 
 ## Miscaleus
 
-### jQuery
-
-I don't use jQuery. It is here because Bootstrap needs it.
-
-### Vendors
-
-All external stuff is stored in vendor folder. All application components are locally available.
-
 ### E-mail validation
 
 I used the following regular expression for e-mail validation.
@@ -95,9 +87,21 @@ I used the following regular expression for e-mail validation.
 
 This is not perfect but I don't want to make this example too complicated.
 
+### Sort alphabetically
+
+List of addresses on index page is sorted alphabetically by First Name then by Last Name.
+
 ### Main Menu
 
 Please note that top-right menu stays highlighted accordingly.
+
+### jQuery
+
+I don't use jQuery. It is here because Bootstrap needs it.
+
+### Vendors
+
+All external stuff is stored in vendor folder. All application components are locally available.
 
 ### Mobile first
 
